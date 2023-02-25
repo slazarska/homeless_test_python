@@ -1,3 +1,10 @@
+# Idea
+.idea
+
+# Allure
+.allure
+allure-results
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
