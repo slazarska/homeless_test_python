@@ -1,4 +1,4 @@
-from homeless_test_python.model import app
+from homeless_test_python import app
 import allure
 from allure_commons.types import Severity
 
