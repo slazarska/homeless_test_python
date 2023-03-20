@@ -1,8 +1,9 @@
 import pytest
 from selene.support.shared import browser
-from homeless_test_python import app
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
+from homeless_test_python import app
 
 
 @pytest.fixture(scope='session')
@@ -21,18 +22,18 @@ def browser_management():
     }
     options.capabilities.update(selenoid_capabilities)
 
-    #driver = webdriver.Remote(
-    #    command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
-   #     options=options)
+    driver = webdriver.Remote(
+        command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
+        options=options)
 
-    #browser.config.driver = driver
+    browser.config.driver = driver
 
     yield
 
-    #app.attach.add_html(browser)
-    #app.attach.add_screenshot(browser)
-    #app.attach.add_logs(browser)
-    #app.attach.add_video(browser)
+    app.attach.add_html(browser)
+    app.attach.add_screenshot(browser)
+    app.attach.add_logs(browser)
+    app.attach.add_video(browser)
     browser.quit()
 
 
