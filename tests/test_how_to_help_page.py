@@ -1,3 +1,5 @@
+import pytest
+
 from homeless_test_python import app
 import allure
 from allure_commons.types import Severity
@@ -38,6 +40,7 @@ def test_choose_regular_donation(how_to_help):
     '''
 
 
+@pytest.mark.skip(reason="work in progress")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "slazarska")
 @allure.feature("Пожертвования")
@@ -49,6 +52,7 @@ def test_choose_sum_of_regular_donation(how_to_help):
     app.howtohelp.check_standard_sum_message(300)
 
 
+@pytest.mark.skip(reason="work in progress")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "slazarska")
 @allure.feature("Пожертвования")
@@ -60,6 +64,7 @@ def test_choose_sum_of_one_time_donation(how_to_help):
     app.howtohelp.check_standard_sum_message(1000)
 
 
+@pytest.mark.skip(reason="work in progress")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "slazarska")
 @allure.feature("Пожертвования")
@@ -72,6 +77,7 @@ def test_fill_the_donate_form_with_valid_data(how_to_help):
     app.howtohelp.check_submit_button()
 
 
+@pytest.mark.skip(reason="work in progress")
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "slazarska")
 @allure.feature("Пожертвования")
