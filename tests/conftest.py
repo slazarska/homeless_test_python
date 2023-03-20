@@ -5,11 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def browser_management():
     browser.config.window_width = 2560
     browser.config.window_height = 1440
-    browser.config.timeout = 10
 
     options = Options()
     selenoid_capabilities = {
