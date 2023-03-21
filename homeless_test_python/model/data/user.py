@@ -9,4 +9,4 @@ class User:
 
 test_user = User(
     name='Святослав Вернидубович Кривич',
-    email='krivich@smolensk.org')
+    email='krivi4@smolensk.org')
