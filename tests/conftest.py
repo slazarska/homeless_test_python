@@ -1,6 +1,6 @@
 import pytest
-from selene.support import webdriver
 from selene.support.shared import browser
+from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from homeless_test_python.utils import attach
