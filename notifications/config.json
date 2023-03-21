@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "qa_guru python homework",
+    "environment": "test env",
+    "comment": "Houston, we have a problem",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5614412853:AAH27kwusuEqCqISGOt5X_FTVmZVvQ7kK2w",
+    "chat": "-1001863911116",
+    "replyTo": ""
+  }
+}
