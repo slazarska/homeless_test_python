@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from homeless_test_python.utils import attach
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session', autouse=True)
 def browser_management():
     browser.config.window_width = 2560
     browser.config.window_height = 1440
