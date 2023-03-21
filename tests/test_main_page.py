@@ -1,4 +1,3 @@
-from homeless_test_python import app
 import allure
 from allure_commons.types import Severity
 
