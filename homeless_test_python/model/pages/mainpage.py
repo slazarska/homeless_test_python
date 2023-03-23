@@ -3,16 +3,16 @@ from selene.support.shared import browser
 from selene import be
 
 
-@allure.step("Open Main Page")
+@allure.step("Открыть главную страницу")
 def open_main_page():
     browser.open('https://homeless.ru/')
 
 
-@allure.step("Check the main page is opened")
+@allure.step("Проверить, что главная страница загрузилась")
 def check_main_page_is_opened():
     browser.element('.logo-main').should(be.visible)
 
 
-@allure.step("Click on the How To Help button")
+@allure.step("Нажать кнопку перехода на страницу пожертвований")
 def click_help_button():
-    browser.element('[href=how_to_help]').should(be.clickable).click()
+    browser.element('li.header-banner__item a[href="/how_to_help/"]').click()

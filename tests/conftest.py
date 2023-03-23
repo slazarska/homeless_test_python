@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from homeless_test_python.utils import attach
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def browser_management():
     browser.config.window_width = 2560
     browser.config.window_height = 1440
@@ -37,6 +37,6 @@ def browser_management():
     browser.quit()
 
 
-@pytest.fixture(scope='function', autouse=True)
-def how_to_help(browser_management):
+@pytest.fixture(scope='function')
+def how_to_help():
     browser.open('https://homeless.ru/how_to_help/')

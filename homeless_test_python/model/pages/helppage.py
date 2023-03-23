@@ -13,6 +13,13 @@ ONE_THOUSAND_MESSAGE = '1 000 рублей'
 THREE_THOUSAND_MESSAGE = '3 000 рублей'
 
 
+@allure.step("Проверить, что страница пожертвований открылась в новой вкладке браузера")
+def check_help_page_is_opened():
+    browser.switch_to_next_tab()
+    browser.config.timeout = 15
+    browser.element('.m-help-page').should(be.visible)
+
+
 @allure.step("Выбрать одноразовую форму пожертвования")
 def choose_one_time_donation():
     browser.element('[data-period="разово"]').should(be.clickable).click()
@@ -59,7 +66,7 @@ def check_standard_sum_message(amount=int):
             .should(have.text(THREE_THOUSAND_MESSAGE))
 
 
-@allure.step("Ввести корректное имя в поле формы для отправки пожертвования")
+@allure.step("Ввести корректное имя пользователя в поле формы для отправки пожертвования")
 def set_username(test_data='name'):
     browser.element('[name="help-transfer-name"]').type(test_data).press_tab()
 
@@ -82,3 +89,8 @@ def click_on_submit_button():
 @allure.step("Проверить сообщение об ошибке в форме отправки пожертвования")
 def check_error_message():
     browser.element('label[id="help-transfer-email-error"]').should(have.text("Заполните, пожалуйста"))
+
+
+@allure.step("Проверить отсутствие сообщения об ошибке в форме отправки пожертвования")
+def check_error_message_is_missing():
+    browser.element('label[id="help-transfer-email-error"]').should(be.absent)

@@ -22,9 +22,6 @@ def test_choose_default_state_of_donation(how_to_help):
 def test_choose_of_one_time_donation(how_to_help):
     helppage.choose_one_time_donation()
     helppage.check_donation_warning(helppage.ONE_TIME_DONATION_WARNING)
-    '''
-    add the check of payments methods
-    '''
 
 
 @allure.severity(Severity.CRITICAL)
@@ -35,9 +32,6 @@ def test_choose_of_one_time_donation(how_to_help):
 def test_choose_regular_donation(how_to_help):
     helppage.choose_regular_donation()
     helppage.check_donation_warning(helppage.REGULAR_DONATION_WARNING)
-    '''
-    add the check of payments methods
-    '''
 
 
 @allure.severity(Severity.CRITICAL)
@@ -71,6 +65,7 @@ def test_choose_sum_of_one_time_donation(how_to_help):
 def test_fill_the_donate_form_with_valid_data(how_to_help):
     helppage.set_username(test_user.name)
     helppage.set_email(test_user.email)
+    helppage.check_error_message_is_missing()
     helppage.check_submit_button()
 
 
@@ -94,4 +89,5 @@ def test_fill_the_donate_form(how_to_help):
                     "отправки пожертвования")
 def test_fill_the_donate_form(how_to_help):
     helppage.set_email(test_user.email)
+    helppage.check_error_message_is_missing()
     helppage.check_submit_button()
