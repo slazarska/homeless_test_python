@@ -3,7 +3,7 @@
 ## Автотесты написаны с использованием:
 <div>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/python.png" title="Python" alt="Python" width="40" height="40"/>
-<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/pycharmt.png" title="PyCharm" alt="PyCharm" width="40" height="40"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/pycharm.png" title="PyCharm" alt="PyCharm" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/pytest.png" title="Pytest" alt="Pytest" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/selene.png" title="Selene" alt="Selene" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Jenkins.png" title="Jenkins" alt="Jenkins"/>
