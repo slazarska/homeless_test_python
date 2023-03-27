@@ -56,4 +56,4 @@
 
 Благодарности :pray:<br/>
 :green_heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:violet_heart: <a target="_blank" href="https://sites.google.com/view/qasisters/">QA sisters</a><br/>
+:purple_heart: <a target="_blank" href="https://sites.google.com/view/qasisters/">QA sisters</a><br/>
