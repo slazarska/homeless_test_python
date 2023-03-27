@@ -6,11 +6,8 @@ from selenium.webdriver.chrome.options import Options
 from homeless_test_python.utils import attach
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(autouse=True)
 def browser_management():
-    browser.config.window_width = 2560
-    browser.config.window_height = 1440
-
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
@@ -21,15 +18,11 @@ def browser_management():
         }
     }
     options.capabilities.update(selenoid_capabilities)
-
     driver = webdriver.Remote(
         command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
         options=options)
-
     browser.config.driver = driver
-
     yield
-
     attach.add_html(browser)
     attach.add_screenshot(browser)
     attach.add_logs(browser)
@@ -38,10 +31,5 @@ def browser_management():
 
 
 @pytest.fixture(scope='function')
-def how_to_help(browser_management):
+def how_to_help():
     browser.open('https://homeless.ru/how_to_help/')
-
-
-@pytest.fixture(scope='function')
-def main(browser_management):
-    browser.open('https://homeless.ru/')
