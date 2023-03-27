@@ -75,7 +75,7 @@ def test_fill_the_donate_form_with_valid_data(how_to_help):
 @allure.story("Форма для отправки пожертвования")
 @allure.description("Тест проверяет, что поле для электронной почты обязательно для заполнения в форме "
                     "отправки пожертвования")
-def test_fill_the_donate_form(how_to_help):
+def test_email_field_in_donate_form_is_obligatorily(how_to_help):
     helppage.set_username(test_user.name)
     helppage.click_on_submit_button()
     helppage.check_error_message()
@@ -87,7 +87,7 @@ def test_fill_the_donate_form(how_to_help):
 @allure.story("Форма для отправки пожертвования")
 @allure.description("Тест проверяет, что поле для имени необязательно для заполнения в форме "
                     "отправки пожертвования")
-def test_fill_the_donate_form(how_to_help):
+def test_name_field_in_donate_form_is_not_obligatorily(how_to_help):
     helppage.set_email(test_user.email)
     helppage.check_error_message_is_missing()
     helppage.check_submit_button()
