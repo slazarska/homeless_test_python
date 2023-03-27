@@ -1,7 +1,13 @@
 # UI автотесты для сайта проекта [Ночлежка](https://homeless.ru//)
 ![image](homeless_test_python/resources/img/homeless_mainpage.png)
 ## Автотесты написаны с использованием:
-
+<div>
+<img src="https://github.com/slazarska/restful_booker_test_python/blob/main/resources/img/python.png" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+<img src="https://github.com/slazarska/restful_booker_test_python/blob/main/resources/img/Jenkins.png" title="Jenkins" alt="Jenkins"/>
+<img src="https://github.com/slazarska/restful_booker_test_python/blob/main/resources/img/Allure_Report.png" title="Allure Report" alt="Allure Report"/>
+<img src="https://github.com/slazarska/restful_booker_test_python/blob/main/resources/img/AllureTestOps.png" title="AllureTestOps" alt="AllureTestOps"/>
+<img src="https://github.com/slazarska/restful_booker_test_python/blob/main/resources/img/Telegram.png" title="Telegram" alt="Telegram"/>
+</div>
 ## Список проверок, реализованных в автотестах:
 
 - [X] - Открытие главной страницы сайта
