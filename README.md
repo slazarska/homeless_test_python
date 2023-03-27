@@ -2,17 +2,25 @@
 ![image](homeless_test_python/resources/img/homeless_mainpage.png)
 ## Автотесты написаны с использованием:
 <div>
-<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/python.png" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/python.png" title="Python" alt="Python" width="40" height="40"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/pycharmt.png" title="PyCharm" alt="PyCharm" width="40" height="40"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/pytest.png" title="Pytest" alt="Pytest" width="40" height="40"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/selene.png" title="Selene" alt="Selene" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Jenkins.png" title="Jenkins" alt="Jenkins"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/selenoid.png" title="Selenoid" alt="Selenoid" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Allure_Report.png" title="Allure Report" alt="Allure Report"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/AllureTestOps.png" title="AllureTestOps" alt="AllureTestOps"/>
+<img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Jira.png" title="Jira" alt="Jira" width="40" height="40"/>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Telegram.png" title="Telegram" alt="Telegram"/>
 </div>
+
 ## Список проверок, реализованных в автотестах:
 
 - [X] - Открытие главной страницы сайта
-- [X] - Проверка возможностей различных форм и сумм доната
-- [X] - Проверка заполнения полей в форме для отправки доната
+- [X] - Переход на страницу пожертвований
+- [X] - Дефолтное состояние страницы пожертвований
+- [X] - Проверка возможностей выбора различных форм и сумм пожертвований
+- [X] - Проверка заполнения полей в форме для отправки пожертвований
 
 ## Пример видеозаписи прохождения теста:
 ![video]()
@@ -46,5 +54,6 @@
 <br />
 <br />
 
-Благодарность :pray:<br/>
-:green_heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/> 
+Благодарности :pray:<br/>
+:green_heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
+:violet_heart: <a target="_blank" href="https://sites.google.com/view/qasisters/">QA sisters</a><br/>
