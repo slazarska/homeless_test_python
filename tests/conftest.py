@@ -40,3 +40,8 @@ def browser_management():
 @pytest.fixture(scope='function')
 def how_to_help(browser_management):
     browser.open('https://homeless.ru/how_to_help/')
+
+
+@pytest.fixture(scope='function')
+def main(browser_management):
+    browser.open('https://homeless.ru/')
