@@ -1,9 +1,12 @@
 import allure
+import pytest
 from allure_commons.types import Severity
 
 from homeless_test_python.model.pages import helppage
 from homeless_test_python.model.data.user import test_user
 
+
+test_data = [300, 700, 1000, 3000]
 
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "slazarska")
@@ -39,10 +42,12 @@ def test_choose_regular_donation(how_to_help):
 @allure.feature("Пожертвования")
 @allure.story("Регулярные пожертвования")
 @allure.description("Тест проверяет выбор стандартной суммы для регулярных пожертвований")
-def test_choose_sum_of_regular_donation(how_to_help):
+@pytest.mark.parametrize("sum_donation", test_data)
+def test_choose_sum_of_regular_donation(how_to_help, sum_donation):
+    sum_donation = test_data
     helppage.choose_regular_donation()
-    helppage.choose_standard_sum_help(300)
-    helppage.check_standard_sum_message(300)
+    helppage.choose_standard_sum_help(sum_donation)
+    helppage.check_standard_sum_message(sum_donation)
 
 
 @allure.severity(Severity.CRITICAL)
@@ -50,10 +55,12 @@ def test_choose_sum_of_regular_donation(how_to_help):
 @allure.feature("Пожертвования")
 @allure.story("Разовые пожертвования")
 @allure.description("Тест проверяет выбор стандартной суммы для одноразового пожертвования")
-def test_choose_sum_of_one_time_donation(how_to_help):
+@pytest.mark.parametrize("sum_donation", test_data)
+def test_choose_sum_of_one_time_donation(how_to_help, sum_donation):
+    sum_donation = test_data
     helppage.choose_one_time_donation()
-    helppage.choose_standard_sum_help(3000)
-    helppage.check_standard_sum_message(3000)
+    helppage.choose_standard_sum_help(sum_donation)
+    helppage.check_standard_sum_message(sum_donation)
 
 
 @allure.severity(Severity.CRITICAL)
