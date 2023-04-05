@@ -67,7 +67,7 @@
 pytest . --alluredir allure-results/
 ```
 
-#### Allure Reports подключен для формирования отчетов о прохождении тестов:
+## Allure Reports подключен для формирования отчетов о прохождении тестов:
 ![image](homeless_test_python/resources/img/screenshots/allure_report_0.png)
 ![image](homeless_test_python/resources/img/screenshots/allure_report_1.png)
 <br />
@@ -77,16 +77,16 @@ pytest . --alluredir allure-results/
 allure serve .\allure-results
 ```
 
-#### Allure TestOps используется в качестве Тест Менеджмент системы:
+## Allure TestOps используется в качестве Тест Менеджмент системы:
 ![image](homeless_test_python/resources/img/screenshots/testops_1.png)
 ![image](homeless_test_python/resources/img/screenshots/testops_0.png)
 <br />
 <br />
-#### Настроена интеграция TestOps с Jira:
+## Настроена интеграция TestOps с Jira:
 ![image](homeless_test_python/resources/img/screenshots/jira.png)
 <br /> 
 <br />
-#### Настроено автоматическое оповещение о результатах запуска тестов в Jenkins в Telegram-чат:
+## Настроено автоматическое оповещение о результатах запуска тестов в Jenkins в Telegram-чат:
 ![image](homeless_test_python/resources/img/screenshots/bot.png)
 <br />
 <br />
