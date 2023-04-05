@@ -86,7 +86,7 @@ allure serve .\allure-results
 ![image](homeless_test_python/resources/img/screenshots/jira.png)
 <br /> 
 <br />
-## Настроено автоматическое оповещение о результатах запуска тестов в Jenkins в Telegram-чат:
+## Настроено автоматическое оповещение о результатах удаленного запуска тестов в Telegram-чат:
 ![image](homeless_test_python/resources/img/screenshots/bot.png)
 <br />
 <br />
