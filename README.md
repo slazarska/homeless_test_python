@@ -1,19 +1,19 @@
 # UI автотесты для сайта проекта [Ночлежка](https://homeless.ru//)
-![image](homeless_test_python/resources/img/homeless_mainpage.png)
+![image](homeless_test_python/resources/img/screenshots/homeless_mainpage.png)
 
-## :open_book: Содержание:
+## Содержание:
 - [Technology Stack](#автотесты-написаны-с-использованием)
-- [Кратко о проекте](#in-a-nutshell-about-the-project)
-- [Checks are implemented](#heavy_check_mark-checks-are-implemented)
-- Tests launch:
-  - [Jenkins](#-remote-launch-via-jenkins])
-  - [Local](#computer-local-launch )
-- Reporst:
-  - [Allure](#bar_chart-test-reports-available-in-allure)
-  - [BrowserStack](#-browserstack)
-  - [Telegram](#-telegram)
-- [Allure TestOps](#briefcase-intergation-with-allure-testops)
-- [Video](#movie_camera-test-run-video-example)
+- [О проекте](#о-проекте)
+- [Список проверок, реализованных в автотестах:](#список-проверок-реализованных-в-автотстах)
+- Запуск тестов:
+  - [Jenkins](#удаленный-запуск-через-jenkins)
+  - [Локально](#запуск-тестов-локально)
+- Интеграции и отчетность:
+  - [Allure Reports](#allure-reports-подключен-для-формирования-отчетов-о-прохождении-тестов)
+  - [Allure TestOps](#allure-testOps-используется-в-качестве-Тест-Менеджмент-системы)
+  - [Jira](#настроена-интеграция-TestOps-с-Jira)
+  - [Telegram](#yастроено-автоматическое-оповещение-о-результатах-удаленного-запуска-тестов-в-Telegram-чат)
+- [Video](#пример-записи-экрана-при-прохождения-теста)
 
 
 ## Автотесты написаны с использованием:
@@ -30,12 +30,13 @@
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Telegram.png" title="Telegram" alt="Telegram"/>
 </div>
 
-## Кратко о проекте:
+## О проекте:
+
 - [x] Паттерны `Page Object` и `Application Manager`
 - [x] Self-documenting code
 - [x] Параметризация
-- [x] Удаленный запуск тестов, используя Jenkins и Selenoid
-- [x] `Allure Reports` с приложением тест артефактов: логи, скриншоты, запись экрана
+- [x] Запуск тестов с использованием Jenkins и Selenoid
+- [x] `Allure Reports` с приложением логов, скриншотов, записей экрана
 - [x] Интеграция с `Allure TestOps`
 - [x] Интеграция с `Jira`
 - [x] Отправка результатов тестовых прогонов в `Telegram`
@@ -53,6 +54,8 @@
 Для запуска тестов из Jenkins:
 1. Нажмите кнопку "Собрать сейчас"
 
+![image](homeless_test_python/resources/img/screenshots/jenkins_run.png)
+
 ## Запуск тестов локально:
 
 1. Склонируйте репозиторий
@@ -64,37 +67,32 @@
 pytest . --alluredir allure-results/
 ```
 
-## Пример видеозаписи прохождения теста:
-![video]()
-<br><br>
-## Скриншоты:
-#### *Selenoid используется для реализации протокола Selenium.::*
-![image]()
-<br />
-<br />
-#### *Jenkins используется в качестве CI системы*
-![image]()
-<br /> 
-<br />
 #### *Allure Reports подключен для формирования отчетов о прохождении тестов:*
-![image]()
-![image]()
+![image](homeless_test_python/resources/img/screenshots/allure_report_0.png)
+![image](homeless_test_python/resources/img/screenshots/allure_report_1.png)
 <br />
 <br />
+> Для получения Allure Report при локальном запуске введите в командной строке:
+```bash
+allure serve .\allure-results
+```
+
 #### *Allure TestOps используется в качестве Тест Менеджмент системы:*
-![image]()
-![image]()
-![image]()
+![image](homeless_test_python/resources/img/screenshots/testops_1.png)
+![image](homeless_test_python/resources/img/screenshots/testops_0.png)
 <br />
 <br />
-#### *Настроена интеграция Test Ops с Jira:*
-![image]()
+#### *Настроена интеграция TestOps с Jira:*
+![image](homeless_test_python/resources/img/screenshots/jira.png)
 <br /> 
 <br />
 #### *Настроено автоматическое оповещение о результатах запуска тестов в Jenkins в Telegram-чат с помощью бота:*
-![image]()
+![image](homeless_test_python/resources/img/screenshots/bot.png)
 <br />
 <br />
+## Пример записи экрана при прохождения теста:
+![video](homeless_test_python/resources/img/screenshots/video.gif)
+<br><br>
 
 Благодарности :pray:<br/>
 :green_heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
