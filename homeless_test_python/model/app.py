@@ -6,4 +6,3 @@ from homeless_test_python.model.data.user import test_user
 main_page = MainPage()
 help_page = HelpPage()
 message = Messages()
-
