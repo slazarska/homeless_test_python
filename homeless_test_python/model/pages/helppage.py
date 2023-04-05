@@ -2,15 +2,7 @@ import allure
 from selene import be, have
 from selene.support.shared import browser
 
-ONE_TIME = 'one-time'
-REGULAR = 'regular'
-THREE_HUNDRED_MESSAGE = '300 рублей'
-ONE_TIME_DONATION_WARNING = 'Вы выбрали разовое пожертвование'
-REGULAR_DONATION_WARNING = 'Вы выбрали регулярные пожертвования'
-THREE_HUNDRED_MESSAGE = '300 рублей'
-SEVEN_HUNDRED_MESSAGE = '700 рублей'
-ONE_THOUSAND_MESSAGE = '1 000 рублей'
-THREE_THOUSAND_MESSAGE = '3 000 рублей'
+from homeless_test_python.model.data.messages import Messages
 
 
 @allure.step("Проверить, что страница пожертвований открылась в новой вкладке браузера")
@@ -32,10 +24,10 @@ def choose_regular_donation():
 
 @allure.step("Проверить выбранную форму пожертвования")
 def check_donation_warning(period='text'):
-    if period == ONE_TIME:
-        browser.element('.donation-warning').should(have.text(ONE_TIME_DONATION_WARNING))
-    elif period == REGULAR:
-        browser.element('.donation-warning').should(have.text(REGULAR_DONATION_WARNING))
+    if period == Messages.ONE_TIME:
+        browser.element('.donation-warning').should(have.text(Messages.ONE_TIME_DONATION_WARNING))
+    elif period == Messages.REGULAR:
+        browser.element('.donation-warning').should(have.text(Messages.REGULAR_DONATION_WARNING))
 
 
 @allure.step("Выбрать стандартную сумму пожертвования")
@@ -54,16 +46,16 @@ def choose_standard_sum_help(amount=int):
 def check_standard_sum_message(amount=int):
     if amount == 300:
         browser.element('p[class="form-donate__sum--desc active"]') \
-            .should(have.text(THREE_HUNDRED_MESSAGE))
+            .should(have.text(Messages.THREE_HUNDRED_MESSAGE))
     elif amount == 700:
         browser.element('p[class="form-donate__sum--desc active"]') \
-            .should(have.text(SEVEN_HUNDRED_MESSAGE))
+            .should(have.text(Messages.SEVEN_HUNDRED_MESSAGE))
     elif amount == 1000:
         browser.element('p[class="form-donate__sum--desc active"]') \
-            .should(have.text(ONE_THOUSAND_MESSAGE))
+            .should(have.text(Messages.ONE_THOUSAND_MESSAGE))
     elif amount == 3000:
         browser.element('p[class="form-donate__sum--desc active"]') \
-            .should(have.text(THREE_THOUSAND_MESSAGE))
+            .should(have.text(Messages.THREE_THOUSAND_MESSAGE))
 
 
 @allure.step("Ввести корректное имя пользователя в поле формы для отправки пожертвования")

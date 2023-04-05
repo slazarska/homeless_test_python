@@ -2,6 +2,7 @@ import allure
 import pytest
 from allure_commons.types import Severity
 
+from homeless_test_python.model.data.messages import Messages
 from homeless_test_python.model.data.user import test_user
 from homeless_test_python.model.pages import helppage
 
@@ -16,21 +17,21 @@ class TestHelpPage:
     @allure.story("Регулярные пожертвования")
     @allure.description("Тест проверяет, что по умолчанию выбраны регулярные пожертвования")
     def test_choose_default_state_of_donation(self, how_to_help):
-        helppage.check_donation_warning(helppage.REGULAR_DONATION_WARNING)
+        helppage.check_donation_warning(Messages.REGULAR_DONATION_WARNING)
 
     @allure.severity(Severity.CRITICAL)
     @allure.story("Разовые пожертвования")
     @allure.description("Тест проверяет возможность выбрать одноразовое пожертвование")
     def test_choose_of_one_time_donation(self, how_to_help):
         helppage.choose_one_time_donation()
-        helppage.check_donation_warning(helppage.ONE_TIME_DONATION_WARNING)
+        helppage.check_donation_warning(Messages.ONE_TIME_DONATION_WARNING)
 
     @allure.severity(Severity.CRITICAL)
     @allure.story("Регулярные пожертвования")
     @allure.description("Тест проверяет возможность выбрать регулярные пожертвования")
     def test_choose_regular_donation(self, how_to_help):
         helppage.choose_regular_donation()
-        helppage.check_donation_warning(helppage.REGULAR_DONATION_WARNING)
+        helppage.check_donation_warning(Messages.REGULAR_DONATION_WARNING)
 
     @allure.severity(Severity.CRITICAL)
     @allure.story("Регулярные пожертвования")
