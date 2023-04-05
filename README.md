@@ -1,5 +1,21 @@
 # UI автотесты для сайта проекта [Ночлежка](https://homeless.ru//)
 ![image](homeless_test_python/resources/img/homeless_mainpage.png)
+
+## :open_book: Содержание:
+- [Technology Stack](#автотесты-написаны-с-использованием)
+- [Кратко о проекте](#in-a-nutshell-about-the-project)
+- [Checks are implemented](#heavy_check_mark-checks-are-implemented)
+- Tests launch:
+  - [Jenkins](#-remote-launch-via-jenkins])
+  - [Local](#computer-local-launch )
+- Reporst:
+  - [Allure](#bar_chart-test-reports-available-in-allure)
+  - [BrowserStack](#-browserstack)
+  - [Telegram](#-telegram)
+- [Allure TestOps](#briefcase-intergation-with-allure-testops)
+- [Video](#movie_camera-test-run-video-example)
+
+
 ## Автотесты написаны с использованием:
 <div>
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/python.png" title="Python" alt="Python" width="40" height="40"/>
@@ -14,6 +30,16 @@
 <img src="https://github.com/slazarska/homeless_test_python/blob/main/homeless_test_python/resources/img/icons/Telegram.png" title="Telegram" alt="Telegram"/>
 </div>
 
+## Кратко о проекте:
+- [x] Паттерны `Page Object` и `Application Manager`
+- [x] Self-documenting code
+- [x] Параметризация
+- [x] Удаленный запуск тестов, используя Jenkins и Selenoid
+- [x] `Allure Reports` с приложением тест артефактов: логи, скриншоты, запись экрана
+- [x] Интеграция с `Allure TestOps`
+- [x] Интеграция с `Jira`
+- [x] Отправка результатов тестовых прогонов в `Telegram`
+
 ## Список проверок, реализованных в автотестах:
 
 - [X] - Открытие главной страницы сайта
@@ -22,13 +48,20 @@
 - [X] - Проверка возможностей выбора различных форм и сумм пожертвований
 - [X] - Проверка заполнения полей в форме для отправки пожертвований
 
+## Удаленный запуск через [Jenkins](https://jenkins.autotests.cloud/job/slazarska-py-diplom-ui/):
+
+Для запуска тестов из Jenkins:
+1. Нажмите кнопку "Собрать сейчас"
+
 ## Запуск тестов локально:
-```bash
 
-```
-## Запуск тестов удаленно:
+1. Склонируйте репозиторий
+2. Установите Poetry (`poetry install`)
+3. Откройте проект в PyCharm, установите Python Interpreter
+4. Создайте .env файл в папке проекта по образцу (sample)
+5. Запустите тесты в PyCharm или в командной строке:
 ```bash
-
+pytest . --alluredir allure-results/
 ```
 
 ## Пример видеозаписи прохождения теста:
