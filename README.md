@@ -9,7 +9,7 @@
   - [Jenkins](#удаленный-запуск-через-jenkins)
   - [Локально](#запуск-тестов-локально)
 - Интеграции и отчетность:
-  - [Allure Reports](#allure-reports-подключен-для-формирования-отчетов-о-прохождении-тестов)
+  - [Allure Report](#allure-report-подключен-для-формирования-отчетов-о-прохождении-тестов)
   - [Allure TestOps](#allure-testOps-используется-в-качестве-Тест-Менеджмент-системы)
   - [Jira](#настроена-интеграция-TestOps-с-Jira)
   - [Telegram](#настроено-автоматическое-оповещение-о-результатах-удаленного-запуска-тестов-в-Telegram-чат)
@@ -67,12 +67,12 @@
 pytest . --alluredir allure-results/
 ```
 
-## Allure Reports подключен для формирования отчетов о прохождении тестов:
+## Allure Report подключен для формирования отчетов о прохождении тестов:
 ![image](homeless_test_python/resources/img/screenshots/allure_report_0.png)
 ![image](homeless_test_python/resources/img/screenshots/allure_report_1.png)
 <br />
 <br />
-> Для получения Allure Report при локальном запуске введите в командной строке:
+> Для получения отчета в Allure Report при локальном запуске введите в командной строке:
 ```bash
 allure serve .\allure-results
 ```
