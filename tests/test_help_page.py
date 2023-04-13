@@ -42,7 +42,6 @@ class TestHelpPage:
     @pytest.mark.parametrize("sum_donation", test_data)
     def test_choose_sum_of_regular_donation(self, how_to_help, sum_donation):
         app.help_page.open_help_page()
-        sum_donation = test_data
         app.help_page.choose_regular_donation()
         app.help_page.choose_standard_sum_help(sum_donation)
         app.help_page.check_standard_sum_message(sum_donation)
@@ -53,7 +52,6 @@ class TestHelpPage:
     @pytest.mark.parametrize("sum_donation", test_data)
     def test_choose_sum_of_one_time_donation(self, how_to_help, sum_donation):
         app.help_page.open_help_page()
-        sum_donation = test_data
         app.help_page.choose_one_time_donation()
         app.help_page.choose_standard_sum_help(sum_donation)
         app.help_page.check_standard_sum_message(sum_donation)
