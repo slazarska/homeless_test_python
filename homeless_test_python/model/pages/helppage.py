@@ -1,3 +1,5 @@
+import os
+
 import allure
 from selene import be, have
 from selene.support.shared import browser
@@ -6,6 +8,11 @@ from homeless_test_python.model import app
 
 
 class HelpPage:
+
+    @allure.step("Открыть страницу пожертвований")
+    def open_help_page(self):
+        browser.open(os.getenv('URL'))
+        return self
 
     @allure.step("Проверить, что страница пожертвований открылась в новой вкладке браузера")
     def check_help_page_is_opened(self):

@@ -46,4 +46,4 @@ def browser_management():
 
 @pytest.fixture(scope='function')
 def how_to_help():
-    browser.open('https://homeless.ru/how_to_help/')
+    browser.config.base_url = os.getenv('URL')
