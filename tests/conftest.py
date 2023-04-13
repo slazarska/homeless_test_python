@@ -42,8 +42,3 @@ def browser_management():
     attach.add_logs(browser)
     attach.add_video(browser)
     browser.quit()
-
-
-@pytest.fixture(scope='function')
-def how_to_help():
-    browser.config.base_url = os.getenv('URL')
