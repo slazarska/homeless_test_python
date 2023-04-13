@@ -68,7 +68,7 @@ pytest . --alluredir allure-results/
 ```
 
 ## Allure Report подключен для формирования отчетов о прохождении тестов:
-![image](homeless_test_python/resources/img/screenshots/allure_report_0.png)
+![image](homeless_test_python/resources/img/screenshots/allure_report_2.png)
 ![image](homeless_test_python/resources/img/screenshots/allure_report_1.png)
 <br />
 <br />
