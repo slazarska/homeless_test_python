@@ -34,6 +34,7 @@ def browser_management():
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options)
     browser.config.driver = driver
+    browser.config.base_url = os.getenv('BASE_URL')
 
     yield browser
 

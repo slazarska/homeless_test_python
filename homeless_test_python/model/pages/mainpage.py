@@ -1,13 +1,18 @@
+import os
+
 import allure
-from selene.support.shared import browser
+from dotenv import load_dotenv
 from selene import be
+from selene.support.shared import browser
+
+load_dotenv()
 
 
 class MainPage:
 
     @allure.step("Открыть главную страницу")
     def open_main_page(self):
-        browser.open('https://homeless.ru/')
+        browser.open(os.getenv('BASE_URL'))
         return self
 
     @allure.step("Проверить, что главная страница загрузилась")

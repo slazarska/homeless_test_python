@@ -1,17 +1,20 @@
 import os
 
 import allure
+from dotenv import load_dotenv
 from selene import be, have
 from selene.support.shared import browser
 
 from homeless_test_python.model import app
+
+load_dotenv()
 
 
 class HelpPage:
 
     @allure.step("Открыть страницу пожертвований")
     def open_help_page(self):
-        browser.open(os.getenv('URL'))
+        browser.open(os.getenv('BASE_URL') + 'how_to_help/')
         return self
 
     @allure.step("Проверить, что страница пожертвований открылась в новой вкладке браузера")
