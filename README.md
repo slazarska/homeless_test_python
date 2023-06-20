@@ -49,7 +49,7 @@
 - [X] - Проверка возможностей выбора различных форм и сумм пожертвований
 - [X] - Проверка заполнения полей в форме для отправки пожертвований
 
-## Удаленный запуск через [Jenkins](https://jenkins.autotests.cloud/job/slazarska-py-diplom-ui/):
+## Удаленный запуск через [Jenkins](https://jenkins.autotests.cloud/job/Students/job/slazarska-py-diplom-ui/):
 
 Для запуска тестов из Jenkins:
 1. Нажмите кнопку "Собрать сейчас"
